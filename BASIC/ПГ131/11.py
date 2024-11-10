@@ -1,24 +1,11 @@
-from tkinter import *
+import math
 
-screen = Tk()
-screen.title("Cat")
-screen.geometry("500x500")
-screen['bg'] = 'white'
-screen.resizable(False, False)
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-text1 = Label(bg='white',
-              text='Кошки и корма😼',
-              font=('Arial', 20, 'bold'))
-text1.pack()
-text2 = Label(bg='white',
-              fg='grey',
-              text='class',
-              font=('Arial', 20, 'bold'))
-text2.pack()
-text3 = Label(bg='black',
-              fg='white',
-              text='method',
-              font=('Arial', 20, 'bold'))
-text3.place(relx=0.5, rely=0.5)
+    def area(self):
+        return math.pi * (self.radius ** 2)
 
-screen.mainloop()
+    def perimeter(self):
+        return 2 * math.pi * self.radius
