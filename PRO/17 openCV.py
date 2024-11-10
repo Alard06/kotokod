@@ -25,6 +25,8 @@ cv2.circle(img, (w//2, h//2), 100, (0, 255, 0), thickness=cv2.FILLED)  # cv2.FIL
 cv2.rectangle(img, (100, 100), (300, 250), (0, 0, 255), thickness=cv2.FILLED)
 cv2.putText(img, 'OpenCV', (100, 500), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
+blur_gaus = cv2.cvtColor(img, cv2.COLOR_BGR2LUV)
 
-cv2.imshow( 'zzz', img)
+
+cv2.imshow( 'zzz', blur_gaus)
 cv2.waitKey(0)
