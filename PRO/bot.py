@@ -66,6 +66,7 @@ async def callback_query(callback: types.CallbackQuery):
     global balls
     if callback.data == 'start':
         await callback.answer('Старт')
+
         balls = 0
         for i in range(3):
             flags[i] = 1
